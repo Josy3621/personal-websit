@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calander</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="home">
+
+            <div class="max-width">
+                <div class="logo">
+                    <a href="index.html">
+                        <p>Personal <span>Website</span></p>
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html" class="menu-btn">Home</a></li>
+                    <li><a href="Working on.html" class="menu-btn">Working on</a></li>
+                    <li><a href="My skills.html" class="menu-btn">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="schedule.html">schedule</a></li>
+                    <li><a href="about.html">about</a></li>
+
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="all">
+        <div class="schedule-header">
+            <h1>My Schedule Of The Teak</h1>
+        </div>
+        <div class="calander">
+            <iframe src="https://calendar.google.com/calendar/embed?src=yosefgirma28%40gmail.com&ctz=Africa%2FNairobi"
+                style="border: 0" width="700" height="500" frameborder="89" scrolling="no"></iframe><br>
+
+
+            <button type="button" onclick="document.getElementById('date').innerHTML=Date()">Click to view Date and
+                Time</button>
+            <p id="date" style="color: aliceblue;"></p>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

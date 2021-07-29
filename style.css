@@ -1,0 +1,512 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+body,html{
+    
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+/* home styling */
+.home{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: salmon;
+    z-index: 999;
+    padding: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+.home .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home .logo a p{
+    color: rgb(253, 253, 253);
+    font-size: 35px;
+    font-weight: 600;
+}
+/* hover over for personal*/
+.home .logo a p:hover{
+    color: rgb(82, 100, 202);
+}
+
+.home .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.home .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.home .menu li a:hover{
+    color: rgb(160, 78, 185);
+}
+.home.sticky .menu li a:hover{
+    color: #fff;
+}
+.change-image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image:url(images/JO1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    animation: change 10s infinite ease-in-out;
+}
+@keyframes change{
+    50%
+    {
+        background-image: url(images/JO2.jpg);
+    }
+    100%
+    {
+        background-image: url(images/jO3.jpg);
+    }
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+
+}
+.content h1{
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+.content h1 span{
+    color:rgb(160, 78, 185);
+}
+.content a{
+    background: rgb(0, 0, 0);
+    color: #f1f1f1;
+    padding: 8px 24px;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.content a:hover{
+    background: #03885c; 
+}
+
+/* My learning section styling */
+.learning, .teams{
+    color:#fff;
+    background-image: url(images/wood.jpg);
+}
+
+.learning .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    
+    transition: all 0.3s ease;
+}
+.learning .serv-content .card:hover{
+    background: rgb(82, 100, 202);
+}
+/* ZOOM IN ON WORDS */
+.learning .serv-content .card .box{
+    transition: all 1s ease;
+}
+.learning .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.learning .serv-content .card i{
+    font-size: 50px;
+    color: rgb(160, 78, 185);
+    transition: color 0.3s ease;
+}
+.learning .serv-content .card:hover i{
+    color: #fff;
+}
+.learning .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.learning .serv-content .card .icon{
+    width: 50px;
+    height: 40px;
+}
+
+/* My skills section styling */
+
+.skills{
+    height: inherit;
+    background-image: url(images/wood.jpg);
+    color: #f1f1f1;
+}
+
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-left: 130px;
+}
+.skills .skills-content .left p{
+    padding-left: 80px;
+    text-align: justify;
+}
+.skills .skills-content .left span{
+    color: rgb(216, 245, 87);
+    font-size: 20px;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(160, 78, 185);
+}
+.skills-content .right .html::before{
+    width: 80%;
+}
+.skills-content .right .css::before{
+    width: 60%;
+}
+.skills-content .right .js::before{
+    width: 30%;
+}
+.skills-content .right .php::before{
+    width: 10%;
+}
+.skills-content .right .mysql::before{
+    width: 30%;
+}
+
+/* Contact section */
+.contact{
+    background-image: url(images/wood.jpg);
+    height: 850px;
+    color: #fff;
+}
+.contact .text{
+    font-size: 25px;
+}
+.imge{
+    
+    margin: 5px;
+    width: 50px;
+    height: 25px;
+}
+
+
+/* schedule portion */
+.all{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 10px;
+    background-image: url(images/wood.jpg);
+}
+
+.schedule-header{
+    text-align: center;
+    color: rgb(216, 245, 87);
+    padding-top: 80px;
+}
+
+
+
+
+/* about section styling */
+.about{
+    background-image: url(images/wood.jpg);
+    color: #fff;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: rgb(160, 78, 185);
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: rgb(160, 78, 185);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(160, 78, 185);
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: rgb(160, 78, 185);
+    background: none;
+}
+
+
+
+/* all codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .learning, .skills, .teams, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.learning .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(160, 78, 185);
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+
+/* menu btn styling */
+.menu-btn{
+    color: rgb(98, 143, 40);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+/* footer section styling */
+footer{
+    background: rgb(22, 54, 68);
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .home .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .home .menu.active{
+        left: 0;
+    }
+    .home .menu li{
+        display: block;
+    }
+    .home .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .learning .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .learning .serv-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
